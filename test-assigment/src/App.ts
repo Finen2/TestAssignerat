@@ -14,13 +14,7 @@ export default {
   },
   data: () => ({
     buttons : {},
-    excludedNumbers: []
   }),
-  methods: {
-    numbers(this: any, number: number){
-      this.excludedNumbers.push(number)
-    }
-  },
   created(this: any){
     this.buttons = getButtons()
   }

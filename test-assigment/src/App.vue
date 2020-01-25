@@ -1,10 +1,11 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <CombinedOutput :buttons="buttons" @excludedNum="numbers" />
-    <EventButtons :buttons="buttons" @excludedNum="numbers" />
-    <Groups :buttons="buttons" :indexNums="excludedNumbers" />
-    <VideoInputs :buttons="buttons" @excludedNum="numbers" />
+  <div class="flex-default app">
+    <Groups class="app__gruops" :buttons="buttons" />
+    <div class="flex-default app__buttons">
+      <CombinedOutput :buttons="buttons" />
+      <EventButtons :buttons="buttons" />
+      <VideoInputs :buttons="buttons" />
+    </div>
   </div>
 </template>
 
