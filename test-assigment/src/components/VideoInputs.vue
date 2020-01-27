@@ -1,8 +1,10 @@
 <template lang="html">
-  <b-card bg-variant="dark" header="Video Inputs" text-variant="white" class="flex-coloumn-space-evenly-center videoInputs">
-    <div v-for="btn in videoButtons.Buttons"  class="videoInputs__buttons" :key="btn.QuickButtonGroupOid">
-      <b-button variant="secondary" v-on:click="clickEvent(btn.TriggerId)">{{btn.ButtonText}}</b-button>
-    </div>
+  <b-card no-body bg-variant="dark" header="Video Inputs" text-variant="white" class="videoInputs">
+    <b-card-body class="flex-space-evenly-center videoInputs__body">
+      <div v-for="btn in videoButtons.Buttons" :key="btn.QuickButtonGroupOid">
+        <b-button variant="success" v-on:click="clickEvent(btn.TriggerId)">{{btn.ButtonText}}</b-button>
+      </div>
+    </b-card-body>
   </b-card>
 </template>
 

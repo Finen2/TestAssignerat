@@ -1,20 +1,20 @@
-import { triggerButton } from '@/function/Trigger'
+import { triggerButton } from '@/function/Trigger';
 
 export default {
   name: 'combinedOutput',
   data: () => ({
-    combinedOutputButtons : {}
+    combinedOutputButtons : {},
   }),
   props: {
-    buttons : {}
+    buttons : {},
   },
   methods: {
     clickEvent(triggerId: any){
-      triggerButton(triggerId)
+      triggerButton(triggerId);
     }
   },
   created(this: any){
-    const index = this.buttons.map((element: any) => element.ButtonText).indexOf("Combined output")
-    this.combinedOutputButtons = this.buttons[index]
+    const index = this.buttons.map((element: any) => element.ButtonText).indexOf("Combined output");
+    this.combinedOutputButtons = this.buttons[index];
   },
 }

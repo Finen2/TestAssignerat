@@ -3,13 +3,19 @@
 .groups
   width: 100%
   height: 100vh
+  overflow-y: scroll
 
 .container
   text-align: left
   padding-top: 1em
   +element('header')
-    border-bottom: solid #fff 1px
+    border-bottom: solid $secundary-text-color 1px
   +element('body')
-    border-bottom: solid #fff 1px
+    border-bottom: solid $secundary-text-color 1px
+    padding-top: 0.25em
+    padding-bottom: 0.25em
     +modifier('light')
-      color: white
+      color: $secundary-text-color
+      &:hover
+        color: $hover-text-color
+        transform: scale(2)

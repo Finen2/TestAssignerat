@@ -4,4 +4,7 @@
   height: 50vh
   width: 100%
 
-  +element('buttons')
+@media screen and (max-width: $XS-480-size)
+  .videoInputs
+    +element('body')
+      flex-direction: column

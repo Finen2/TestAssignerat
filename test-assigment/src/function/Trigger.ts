@@ -1,3 +1,3 @@
-export function triggerButton(triggerId: any){
-  console.log('button tiggerd an action with id ' + triggerId)
+export function triggerButton(triggerId: any) {
+  console.log('button tiggerd an action with id ' + triggerId);
 }

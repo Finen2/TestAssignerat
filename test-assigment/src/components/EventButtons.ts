@@ -1,20 +1,20 @@
-import { triggerButton } from '@/function/Trigger'
+import { triggerButton } from '@/function/Trigger';
 
 export default {
   name: 'EventButtons',
   data: () => ({
-    eventButtons : {}
+    eventButtons : {},
   }),
   props: {
-    buttons : {}
+    buttons : {},
   },
   methods: {
     clickEvent(triggerId: any){
-      triggerButton(triggerId)
+      triggerButton(triggerId);
     }
   },
   created(this: any){
-    const index = this.buttons.map((element: any) => element.ButtonText).indexOf("Event buttons")
-    this.eventButtons = this.buttons[index]
+    const index = this.buttons.map((element: any) => element.ButtonText).indexOf("Event buttons");
+    this.eventButtons = this.buttons[index];
   },
 }

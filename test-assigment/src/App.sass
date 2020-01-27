@@ -4,6 +4,8 @@
   margin: 0
   padding: 0
   background-color: $background-color
+  ::-webkit-scrollbar
+    display: none
 
 .app
   font-family: 'Avenir', Helvetica, Arial, sans-serif
@@ -19,3 +21,20 @@
   +element('buttons')
     height: 100vh
     width: calc(100% / 1.5)
+
+@media screen and (max-width: $S-820-size)
+  .app
+    flex-direction: column-reverse
+    +element('gruops')
+      width: 100%
+    +element('buttons')
+      width: 100%
+
+@media screen and (max-width: $XS-480-size)
+  .app
+    +element('gruops')
+      min-height: 100vh
+      height: auto
+    +element('buttons')
+      min-height: 10vh
+      height: auto
